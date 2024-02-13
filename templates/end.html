@@ -2,13 +2,16 @@
 <html>
 <head>
     <title>The End!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 <div class="container">
     <h1>We're going on a date on {{ date }}</h1>
     <p>Take a screenshot, send it to me gg</p>
-    <img src="{{ url_for('static', filename='food' ~ food_id ~ '.jpg') }}" alt="Food {{ food_id }}">
+    <div class="food-item">
+        <img src="{{ url_for('static', filename='food' ~ food_id ~ '.jpg') }}" alt="Food {{ food_id }}">
+    </div>
 </div>
 </body>
 </html>
