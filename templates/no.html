@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oh no!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Oh no!</h1>
+    <img src="{{ url_for('static', filename=image_file) }}" alt="Image" style="max-width: 100%; height: auto;">
+</div>
+</body>
+</html>

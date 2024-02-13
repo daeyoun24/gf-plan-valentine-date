@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Food!</h1>
+    <p>You hungry or what, pick something</p>
+    <div class="food-gallery">
+        {% for i in range(1, 9) %}
+        <div class="food-item">
+            <a href="{{ url_for('end', food_id=i, date=selected_date) }}" class="food-item">
+                <img src="{{ url_for('static', filename='food' ~ i ~ '.jpg') }}" alt="Food {{ i }}">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>
